@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<allocations>
+  <userMaxAppsDefault>USER_MAX_APPS_DEFAULT</userMaxAppsDefault>
+<queue name="root">
+  <maxRunningApps>MAX_RUNNING_APPS</maxRunningApps>
+  <queue name="default">
+    <maxRunningApps>DEFAULT_MAX_APPS</maxRunningApps>
+  </queue>
+  <queue name="root">
+    <maxRunningApps>ROOT_MAX_APPS</maxRunningApps>
+  </queue>
+</queue>
+</allocations>

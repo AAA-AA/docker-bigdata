@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<configuration>
+    <property>
+        <name> mapreduce.framework.name</name>
+        <value>yarn</value>
+        <description>执行框架设置为Hadoop YARN</description>
+    </property>
+    <property>
+        <name>mapreduce.map.memory.mb</name>
+        <value>1536</value>
+        <description>对maps更大的资源限制的</description>
+    </property>
+    <property>
+        <name>mapreduce.map.java.opts</name>
+        <value>-Xmx2014M</value>
+        <description>maps中对jvm child设置更大的堆大小</description>
+    </property>
+    <property>
+        <name>mapreduce.reduce.memory.mb</name>
+        <value>3072</value>
+        <description>设置 reduces对于较大的资源限制</description>
+    </property>
+    <property>
+        <name>mapreduce.reduce.java.opts</name>
+        <value>-Xmx2560M</value>
+        <description>reduces对 jvm child设置更大的堆大小</description>
+    </property>
+    <property>
+        <name>mapreduce.task.io.sort</name>
+        <value>512</value>
+        <description>更高的内存限制，而对数据进行排序的效率</description>
+    </property>
+    <property>
+        <name>mapreduce.task.io.sort.factor</name>
+        <value>100</value>
+        <description>在文件排序中更多的流合并为一次</description>
+    </property>
+    <property>
+        <name>mapreduce.reduce.shuffle.parallelcopies</name>
+        <value>50</value>
+        <description>通过reduces从很多的map中读取较多的平行副本</description>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.address</name>
+        <value>JBH_HOST:18016</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.webapp.address</name>
+        <value>JBH_HOST:18017</value>
+    </property>    
+
+    <property>
+        <name>mapreduce.shuffle.port</name>
+        <value>18018</value>
+    </property>
+
+    <property>
+        <name>yarn.nodemanager.aux-services.spark_shuffle.class</name>
+        <value>org.apache.spark.network.yarn.YarnShuffleService</value>
+    </property>
+    <property>
+        <name>spark.shuffle.service.port</name>
+        <value>18020</value>
+    </property>
+
+</configuration>
